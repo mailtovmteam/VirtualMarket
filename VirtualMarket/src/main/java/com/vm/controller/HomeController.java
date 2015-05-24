@@ -57,7 +57,7 @@ public class HomeController {
 	
 	@RequestMapping(value = "/index", method = RequestMethod.GET)
 	public String redirectToHome(Locale locale, Model model) {
-		
+		System.out.println("You have done GIT clone...");
 		model.addAttribute("serverTime", "Welcome Gaust User!" );
 		
 		return "home";
