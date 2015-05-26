@@ -39,14 +39,13 @@ public class HomeController {
 		
 		User record = this.userService.loginUser(u.getUser_name(), u.getPassword());
 		
-		System.out.println("Record : " + record);
 		if(record != null) {
 		if(record.getUser_name() != null) {
 			
 			model.addAttribute("userrec", record);
 			return "success";
 		}else {
-			System.out.println("Else going...");
+			
 			model.addAttribute("userrec", "Access failed.");
 			return "home";
 		}}else {
@@ -57,7 +56,7 @@ public class HomeController {
 	
 	@RequestMapping(value = "/index", method = RequestMethod.GET)
 	public String redirectToHome(Locale locale, Model model) {
-		System.out.println("You have done GIT clone...");
+		
 		model.addAttribute("serverTime", "Welcome Gaust User!" );
 		
 		return "home";
