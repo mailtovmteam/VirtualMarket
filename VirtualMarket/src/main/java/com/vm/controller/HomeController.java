@@ -58,7 +58,7 @@ public class HomeController {
 	public String redirectToHome(Locale locale, Model model) {
 		
 		model.addAttribute("serverTime", "Welcome Gaust User!" );
-		
+		System.out.println("Ok surya...");
 		return "home";
 	}
 	
